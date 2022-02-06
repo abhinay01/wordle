@@ -18,7 +18,7 @@ class wordle {
     public Map readWordFile() {
         Map<Integer, String> wordMap = new HashMap<Integer, String>();
         // ArrayList<String> words=new ArrayList<>();
-        System.out.println(file_path);
+        // System.out.println(file_path);
         try {
             Scanner sc = new Scanner(new File(file_path));
             sc.useDelimiter("\n");
@@ -107,7 +107,7 @@ class wordle {
         for (int i = 0; i < NO_OF_GUESS; i++) {
             int fail = game.checkInput(selectedWord, wordMap);
             if (fail == 0) {
-                System.out.println("Success");
+                System.out.println("Success in "+i+" attempt");
                 break;
             } else if (fail == -1) {
                 System.out.println("Word not in list");
